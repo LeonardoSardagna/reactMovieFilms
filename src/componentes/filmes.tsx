@@ -1,17 +1,8 @@
-interface FilmsProps{
-    id?: number,
-    titulo: string,
-    ano: string,
-    totalDeTemporada: number,
-    avaliacao: number,
-    descicao: string,
-    atores: string,
-    imagem: string
-}
+import { filmsData } from "../interface/filmsData"
 
-export function CardFilms({ano,atores,avaliacao,descicao,imagem,titulo,totalDeTemporada}: FilmsProps){
+export function CardFilms({ano,atores,avaliacao,descicao,imagem,titulo,totalDeTemporada}: filmsData){
     return(
-        <div>
+        <div className="px-10">
             <img src={imagem} alt={titulo} />
             <div>
                 <h2>{titulo}</h2>
