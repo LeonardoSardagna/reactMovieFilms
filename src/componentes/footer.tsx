@@ -9,7 +9,7 @@ export function Footer() {
             <div className="flex flex-col gap-10">
                 <div className="flex gap-10 justify-between">
                     <div className="flex flex-col gap-5">
-                        <h4 className="text-xl">Conecte-se conosco</h4>
+                        <h4 className="text-xl font-roboto">Conecte-se conosco</h4>
                         <div className="flex gap-5">
                             <BsInstagram className="size-8 cursor-pointer transition ease-in-out hover:scale-105" />
                             <FaFacebook className="size-8 cursor-pointer transition ease-in-out hover:scale-105" />
@@ -19,36 +19,36 @@ export function Footer() {
                     </div>
                     <div className="text-lg flex gap-20">
                         <nav className="flex flex-col gap-2">
-                            <a>Empregos</a>
-                            <a>Cookies e Preferências</a>
-                            <a>Centro de Ajuda</a>
-                            <a>Termos de Uso</a>
-                            <a>Privacidade</a>
+                            <a className="cursor-pointer">Empregos</a>
+                            <a className="cursor-pointer">Cookies e Preferências</a>
+                            <a className="cursor-pointer">Centro de Ajuda</a>
+                            <a className="cursor-pointer">Termos de Uso</a>
+                            <a className="cursor-pointer">Privacidade</a>
                         </nav>
                         <nav className="flex flex-col gap-2">
-                            <a>Notícias</a>
-                            <a>Centro de Mídia</a>
-                            <a>Aviso Legal</a>
-                            <a>Realização de Investidores</a>
-                            <a>Feeds</a>
+                            <a className="cursor-pointer">Notícias</a>
+                            <a className="cursor-pointer">Centro de Mídia</a>
+                            <a className="cursor-pointer">Aviso Legal</a>
+                            <a className="cursor-pointer">Realização de Investidores</a>
+                            <a className="cursor-pointer">Feeds</a>
                         </nav>
                         <nav className="flex flex-col gap-2">
-                            <a>Início</a>
-                            <a>Filmes Populares</a>
-                            <a>Filmes em Alta</a>
-                            <a>Últimos Filmes</a>
-                            <a>Sobre nós</a>
+                            <a href="#principais">Início</a>
+                            <a href="#populares">Filmes Populares</a>
+                            <a href="#genero">Filmes por gênero</a>
+                            <a href="#lancamento">Últimos Filmes</a>
+                            <a className="cursor-pointer">Sobre nós</a>
                         </nav>
                     </div>
                 </div>
                 <div className="flex flex-col gap-5 items-start">
-                    <h4>Desenvolvido por: </h4>
+                    <h4 className="font-roboto">Desenvolvido por: </h4>
                     <User
                         className="cursor-pointer transition ease-in-out hover:scale-105"
                         name="Leonardo Sardagna"
                         description={(
                             <Link href="https://github.com/LeonardoSardagna" size="sm" isExternal>
-                                Leonardo Sardagna
+                                LeonardoSardagna
                             </Link>
                         )}
                         avatarProps={{

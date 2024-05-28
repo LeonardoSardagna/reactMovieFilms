@@ -1,4 +1,4 @@
-export interface filmsData{
+export interface FilmsData{
     id?: number,
     titulo: string,
     ano: string,
