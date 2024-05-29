@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <footer className="py-10 px-10">
             <div className="flex flex-col gap-10">
-                <div className="flex gap-10 justify-between">
+                <div className="flex gap-10 justify-between max-tablet:justify-center">
                     <div className="flex flex-col gap-5">
                         <h4 className="text-xl font-roboto">Conecte-se conosco</h4>
                         <div className="flex gap-5">
@@ -17,7 +17,7 @@ export function Footer() {
                             <SiGmail className="size-8 cursor-pointer transition ease-in-out hover:scale-105" />
                         </div>
                     </div>
-                    <div className="text-lg flex gap-20">
+                    <div className="text-lg flex gap-20 max-tablet:hidden">
                         <nav className="flex flex-col gap-2">
                             <a className="cursor-pointer">Empregos</a>
                             <a className="cursor-pointer">Cookies e Preferências</a>

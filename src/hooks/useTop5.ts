@@ -11,8 +11,8 @@ const fetchLancamento = async (): AxiosPromise<FilmsData[]> => {
 
 export function useTop5() {
     const query = useQuery({
-        queryFn: fetchLancamento, //Passando a url para acessar o banco de dados
-        queryKey: ['films-top5'], //Chave para indentificar os dados que estamos solicitandos
+        queryFn: fetchLancamento, 
+        queryKey: ['films-top5'], 
         retry: 2,
         refetchInterval: 60 * 5 * 1000
     })

@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { CardFilms } from "./filmes";
 import { FilmsData } from "../interface/filmsData";
+import { CircularProgress } from "@nextui-org/react";
 
 interface CarrosselProps{
   slide: number;
@@ -12,8 +13,8 @@ export function Carrossel({slide, data}:CarrosselProps){
         <Swiper
           slidesPerView={slide}
           navigation
-        >
-          {data?.map((filmsData) =>(
+        >  
+          {data? data.map((filmsData) =>(
             <SwiperSlide key={filmsData.id}>
               <CardFilms
                 key={filmsData.id}
@@ -22,7 +23,7 @@ export function Carrossel({slide, data}:CarrosselProps){
                 imagem={filmsData.imagem}
               />
             </SwiperSlide>
-          ))}
+          )) : <CircularProgress aria-label="Loading..." size="lg"/>}
         </Swiper>
     )
 }
