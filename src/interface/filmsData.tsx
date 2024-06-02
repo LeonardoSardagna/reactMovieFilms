@@ -1,8 +1,8 @@
 export interface FilmsData{
-    id?: number,
+    id: number,
     titulo: string,
     ano: string,
-    totalDeTemporada: number,
+    totalDeTemporadas: number,
     avaliacao: number,
     descicao: string,
     atores: string,

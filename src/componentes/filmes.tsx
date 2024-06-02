@@ -2,16 +2,16 @@ import { Button, Card, Image } from "@nextui-org/react"
 import { Star } from "lucide-react"
 import { Link } from "react-router-dom"
 interface PropsFilms {
-    id?: number,
+    id: number,
     titulo: string,
     avaliacao: number,
     imagem: string
 }
 
-export function CardFilms({ avaliacao, imagem, titulo }: PropsFilms) {
+export function CardFilms({ avaliacao, imagem, titulo, id }: PropsFilms) {
     return (
         <div className="px-10">
-            <Card className="w-full h-[500px] col-span-12 sm:col-span-7 max-tablet:w-10/12 max-tablet:h-[350px]">
+            <Card className="w-full h-[500px] col-span-12 sm:col-span-7 max-tablet:w-10/12 max-tablet:h-[350px] ">
                 <Image
                     removeWrapper
                     alt="Card background"
@@ -25,10 +25,10 @@ export function CardFilms({ avaliacao, imagem, titulo }: PropsFilms) {
                     <Star className="text-yellow-500" />
                     <p className="text-lg">{avaliacao}</p>
                 </div>
-                <Link to={"/info"}>
+                <Link to={`/info/${id}`}>
                     <Button
                         radius="full"
-                        className="bg-custom-botao text-white shadow-lg text-lg"
+                        className="bg-custom-botao text-white shadow-lg text-lg w-full"
                     >
                         Detalhes
                     </Button>

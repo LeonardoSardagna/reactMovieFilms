@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 
 const API_URL = 'http://localhost:8080';
 
-const fetchData = async (id: number): Promise<FilmsData[]> => {
+const fetchData = async (id: number): Promise<FilmsData> => {
     const response = await axios.get(`${API_URL}/series/${id}`);
     return response.data;
 }

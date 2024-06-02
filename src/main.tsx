@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { NextUIProvider } from '@nextui-org/react'
@@ -12,9 +11,11 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { InfoFilms } from './componentes/informacaoFilms.tsx'
+import { Busca } from './componentes/busca.tsx'
+import { App } from './App.tsx'
+import { PaginaPadrao } from './componentes/paginaPadrao.tsx'
 
 register();
-
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -23,8 +24,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <NextUIProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<App />}/>
-            <Route path='/info' element={<InfoFilms/>} />
+            <Route element={<PaginaPadrao />}>
+              <Route path='/' element={<App />} />
+              <Route path='busca' element={<Busca />} />
+            </Route>
+            <Route path='/info/:id' element={<InfoFilms />} />
           </Routes>
         </BrowserRouter>
       </NextUIProvider>

@@ -17,6 +17,7 @@ export function Carrossel({slide, data}:CarrosselProps){
           {data? data.map((filmsData) =>(
             <SwiperSlide key={filmsData.id}>
               <CardFilms
+                id={filmsData.id}
                 key={filmsData.id}
                 titulo={filmsData.titulo}
                 avaliacao={filmsData.avaliacao}
