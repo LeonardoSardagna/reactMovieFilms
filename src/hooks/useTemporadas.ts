@@ -13,25 +13,23 @@ export interface Temporada {
 }
 
 const API_URL = 'http://localhost:8080';
-
-const fetchData = async (id: number, temporada?: number) => {
+const fetchData = async (id: number, temporada?: string) => {
     const url = temporada
-    ? `${API_URL}/series/${id}/temporadas/${temporada}`
-    : `${API_URL}/series/${id}/temporadas/todas`;
+        ? `${API_URL}/series/${id}/temporadas/${temporada}`
+        : `${API_URL}/series/${id}/temporadas/todas`;
     const response = await axios.get(url);
-    console.log(response.data)
     return response;
 }
 
 const episodioPorTemporada = (episodios: Episodio[]): Temporada[] => {
-    const agrupamento = episodios.reduce((cont:Temporada[], episodio) => {
+    const agrupamento = episodios.reduce((cont: Temporada[], episodio) => {
         const temp = cont.find(t => t.numero === episodio.temporada)
-        if(temp){
+        if (temp) {
             temp.episodios.push(episodio)
-        }else{
+        } else {
             cont.push({
                 numero: episodio.temporada,
-                episodios: [episodio] 
+                episodios: [episodio]
             })
         }
         return cont
@@ -39,7 +37,7 @@ const episodioPorTemporada = (episodios: Episodio[]): Temporada[] => {
     return agrupamento
 }
 
-export function useTemp(id: number, temporada?: number) {
+export function useTemp(id: number, temporada?: string) {
     const query = useQuery({
         queryFn: () => fetchData(id, temporada),
         queryKey: ['films-temp'],

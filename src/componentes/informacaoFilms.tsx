@@ -1,4 +1,4 @@
-import { Button, CircularProgress, Image } from "@nextui-org/react"
+import { CircularProgress, Image } from "@nextui-org/react"
 import { useInfoFilms } from "../hooks/useInfoSeries"
 import { Calendar, CornerDownLeft, NotebookText, Star, Users } from "lucide-react"
 import { Link, useParams } from "react-router-dom"
@@ -10,9 +10,8 @@ export function InfoFilms() {
 
     const { id } = useParams<{ id: string }>();
     const { data: info, isLoading, error } = useInfoFilms(Number(id))
-    const [temporadaSelecionada, setTemporadaSelecionada] = useState<number | undefined>()
+    const [temporadaSelecionada, setTemporadaSelecionada] = useState<string | undefined>()
     const { data: temporadas } = useTemp(Number(id), temporadaSelecionada)
-
 
     if (isLoading) {
         return <CircularProgress size='lg' label='Carregando...' />
@@ -23,23 +22,18 @@ export function InfoFilms() {
     }
 
     const handleSeasonChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const season = e.target.value === "Todas"
+        const season = e.target.value === "todas"
             ? undefined
-            : Number(e.target.value);
+            : e.target.value;
         setTemporadaSelecionada(season)
-        console.log(season)
     };
 
     return (
         <div className="max-w-[1500px] mx-auto py-10 flex flex-col gap-5">
             <Link to={"/"}>
-                <Button
-                    isIconOnly
-                    color="warning"
-                    variant="bordered"
-                    aria-label="home">
+                <button className="border p-2 rounded-md border-blue-300 text-blue-300">
                     <CornerDownLeft />
-                </Button>
+                </button>
             </Link>
             <div className="flex gap-10 items-center max-laptop:flex-col">
                 <Image
@@ -70,17 +64,17 @@ export function InfoFilms() {
             <h2 className="text-2xl max-laptop:px-5">Total de Temporadas: {info?.totalDeTemporadas}</h2>
             <div className="flex flex-col gap-1">
                 <label htmlFor="">Selecione a temporada</label>
-                <select className="max-w-sm bg-transparent border border-zinc-500 p-1 rounded-md" onChange={handleSeasonChange}>
+                <select className="max-w-sm bg-transparent border border-blue-300 p-1 rounded-md" onChange={handleSeasonChange}>
                     {temporadas.map((temporada: Temporada) => (
                         <option className="bg-black/80" key={temporada.numero} value={temporada.numero} >Temporada: {temporada.numero}</option>
                     ))}
-                    <option className="bg-black/80" value="Todas">
+                    <option className="bg-black/80" value="todas">
                         Todas
                     </option>
                 </select>
             </div>
-            {temporadas.map((temporada: Temporada) => (
-                (temporadaSelecionada === undefined || temporada.numero === temporadaSelecionada) && (
+            {temporadaSelecionada === undefined
+                ? temporadas.map((temporada: Temporada) => (
                     <div key={temporada.numero} className="flex flex-col gap-3">
                         <h3 className="font-roboto text-xl">Temporada: {temporada.numero}</h3>
                         <div className="flex flex-col gap-2">
@@ -93,8 +87,25 @@ export function InfoFilms() {
                             ))}
                         </div>
                     </div>
-                )
-            ))}
+                ))
+                :
+                temporadas
+                    .filter(temporada => temporada.numero === Number(temporadaSelecionada))
+                    .map((temporada: Temporada) => (
+                        <div key={temporada.numero} className="flex flex-col gap-3">
+                            <h3 className="font-roboto text-xl">Temporada: {temporada.numero}</h3>
+                            <div className="flex flex-col gap-2">
+                                {temporada.episodios.map(episodio => (
+                                    <Episodio
+                                        numero={episodio.numeroEpisodio}
+                                        titulo={episodio.titulo}
+                                        key={episodio.numeroEpisodio}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    ))
+            }
         </div>
     )
 }

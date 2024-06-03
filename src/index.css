@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
 }
 
-:root{
+:root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -14,10 +14,10 @@
     -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     @apply font-sans;
 }

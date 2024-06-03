@@ -1,4 +1,4 @@
-import { Button, Card, Image } from "@nextui-org/react"
+import { Card, Image } from "@nextui-org/react"
 import { Star } from "lucide-react"
 import { Link } from "react-router-dom"
 interface PropsFilms {
@@ -26,16 +26,11 @@ export function CardFilms({ avaliacao, imagem, titulo, id }: PropsFilms) {
                     <p className="text-lg">{avaliacao}</p>
                 </div>
                 <Link to={`/info/${id}`}>
-                    <Button
-                        radius="full"
-                        className="bg-custom-botao text-white shadow-lg text-lg w-full"
-                    >
+                    <button className="bg-custom-botao text-white shadow-lg text-lg w-full p-2 rounded-lg transition ease-in-out hover:scale-105">
                         Detalhes
-                    </Button>
+                    </button>
                 </Link>
-
             </div>
         </div>
-
     )
 }

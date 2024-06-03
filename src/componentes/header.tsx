@@ -9,14 +9,14 @@ export function Header() {
     const [busca, setBusca] = useState("");
     const navigate = useNavigate();
     const [menu, setMenu] = useState(true)
-    const toggleMenu = () =>{
+    const toggleMenu = () => {
         setMenu(prevState => !prevState)
     }
 
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement> ) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
-        if(!busca) return
+
+        if (!busca) return
 
         navigate(`/busca?q=${busca}`)
         setBusca("")
@@ -28,9 +28,9 @@ export function Header() {
                 <Popcorn className="size-10 max-desktop:hidden" />
             </Link>
             <div className="hidden max-tablet:block" onClick={toggleMenu}>
-                {menu? <MenuIcon/>  : ''}
+                {menu ? <MenuIcon /> : ''}
             </div>
-            {menu? "" : <Menu setMenu={setMenu}/> }
+            {menu ? "" : <Menu setMenu={setMenu} />}
             <nav className="flex gap-10 text-[17px] max-desktop:gap-5 max-tablet:hidden ">
                 <a className="cursor-pointer transition ease-in-out hover:scale-105 font-roboto" href="#principais">Principais</a>
                 <a className="cursor-pointer transition ease-in-out hover:scale-105 font-roboto" href="#lancamento">Lançamentos</a>

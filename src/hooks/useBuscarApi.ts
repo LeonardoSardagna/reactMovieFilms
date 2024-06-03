@@ -11,7 +11,7 @@ const fetchData = async (busca: string): AxiosPromise<FilmsData[]> => {
 
 export function useBusca(busca: string) {
     const query = useQuery({
-        queryFn: () => fetchData(busca), 
+        queryFn: () => fetchData(busca),
         queryKey: ['films-busca', busca],
         retry: 2,
     })

@@ -10,7 +10,7 @@ export function Propaganda() {
                     Vamos Começar?
                 </Button>
             </div>
-            <img className="max-desktop:size-8/12 max-tablet:size-11/12" src="./public/propaganda.png" alt="dispositivos"/>
+            <img className="max-desktop:size-8/12 max-tablet:size-11/12" src="./public/propaganda.png" alt="dispositivos" />
         </div>
     )
 }
