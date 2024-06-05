@@ -4,9 +4,9 @@ React Films é um projeto frontend desenvolvido em React + TypeScript que se int
 
 ## Funcionalidades
 
-###Exibição de Títulos Principais:
+### Exibição de Títulos Principais:
 -A página inicial apresenta os títulos das séries mais populares, atraindo a atenção do usuário.
-###Lançamentos:
+### Lançamentos:
 -Uma seção dedicada aos últimos lançamentos de séries, mantendo os usuários atualizados com as novidades.
 ### Top 5:
 -Uma lista com as 5 séries mais bem avaliadas, auxiliando na descoberta de novos conteúdos.
@@ -19,7 +19,7 @@ React Films é um projeto frontend desenvolvido em React + TypeScript que se int
 ### Temporadas e Episódios:
 -Cada série exibe suas temporadas e episódios, com informações sobre data de lançamento, sinopse e classificação.
 
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 -React: Biblioteca JavaScript para criar interfaces de usuário declarativas e eficientes.
 -TypeScript: Linguagem superconjunto do JavaScript que adiciona tipagem estática, aprimorando a confiabilidade e a legibilidade do código.
@@ -28,7 +28,7 @@ React Films é um projeto frontend desenvolvido em React + TypeScript que se int
 -Tailwind CSS: Framework CSS que fornece um sistema de classes utilitárias para estilizar rapidamente componentes e interfaces.
 -API Java Films: Interface de programação do backend Java Films, utilizada para recuperar informações sobre as séries.
 
-##Instruções de Uso
+## Instruções de Uso
 
 1. Clone o Repositório:
 ```bash
