@@ -1,10 +1,10 @@
 # React Films
 
-![Captura de tela página principal](public/captura1.png)
+<img src="public/captura1.png" alt="Captura de tela página principal" width="50%">
 ##
-![Captura de tela detalhes da serie](public/captura2.png)
+<img src="public/captura2.png" alt="Captura de tela detalhes da série" width="50%">
 
-React Films é um projeto frontend desenvolvido em React + TypeScript que se integra ao backend Java Films (https://github.com/topics/movies?l=java) para exibir informações sobre séries de TV de forma interativa e intuitiva.
+React Films é um projeto frontend desenvolvido em React + TypeScript que se integra ao backend [Java Films](https://github.com/topics/movies?l=java) para exibir informações sobre séries de TV de forma interativa e intuitiva.
 
 ## Funcionalidades
 
@@ -42,9 +42,18 @@ git clone https://github.com/LeonardoSardagna/reactFilms.git
 ```bash
 cd reactFilms
 ```
-3. Execute a aplicação no navegador:
+3. Instale as dependências:
+```bash
+npm install
+```
+5. Execute a aplicação no navegador:
 ```bash
 npm run dev
 ```
-4. Acesse a aplicação no navegador:
+5. Acesse a aplicação no navegador:
 -Abra um navegador web e acesse a URL `http://localhost:5173`.
+
+## Observações
+- Este projeto é uma interface frontend que consome as APIs fornecidas pelo backend Java Films.
+- Certifique-se de que o backend Java Films esteja rodando e acessível para que o frontend possa obter os dados das séries.
+- A aplicação utiliza React, TypeScript e outras bibliotecas modernas para proporcionar uma experiência de usuário rica e responsiva.
