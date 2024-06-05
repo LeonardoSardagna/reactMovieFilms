@@ -1,5 +1,9 @@
 # React Films
 
+[Captura de tela página principal](public/captura1.png)
+[Captura de tela detalhes da serie](public/captura2.png)
+[vídeo do projeto](public/Filmes%20-%20Google%20Chrome%202024-06-05%2011-33-18.mp4)
+
 React Films é um projeto frontend desenvolvido em React + TypeScript que se integra ao backend Java Films (https://github.com/topics/movies?l=java) para exibir informações sobre séries de TV de forma interativa e intuitiva.
 
 ## Funcionalidades
