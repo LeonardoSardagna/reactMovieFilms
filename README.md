@@ -3,56 +3,56 @@
 <img src="public/captura1.png" alt="Captura de tela página principal" width="50%">
 <img src="public/captura2.png" alt="Captura de tela detalhes da série" width="50%">
 
-React Films é um projeto frontend desenvolvido em React + TypeScript que se integra ao backend [Java Films](https://github.com/topics/movies?l=java) para exibir informações sobre séries de TV de forma interativa e intuitiva.
+React Films is a frontend project developed with React + TypeScript that integrates with the backend  [Java Films](https://github.com/topics/movies?l=java) to display information about TV series in an interactive and intuitive way.
 
-## Funcionalidades
+## Features
 
-### Exibição de Títulos Principais:
-- A página inicial apresenta os títulos das séries mais populares, atraindo a atenção do usuário.
-### Lançamentos:
-- Uma seção dedicada aos últimos lançamentos de séries, mantendo os usuários atualizados com as novidades.
+### Main Titles Display:
+- The homepage showcases the most popular series titles, capturing user attention.
+### Latest Releases:
+- A dedicated section for the latest series releases, keeping users updated with the newest content.
 ### Top 5:
-- Uma lista com as 5 séries mais bem avaliadas, auxiliando na descoberta de novos conteúdos.
-### Navegação por Categoria:
-- Possibilidade de filtrar as séries por categoria, facilitando a busca por gêneros específicos.
-### Busca por Título:
-- Uma barra de busca permite que os usuários encontrem rapidamente a série desejada.
-### Detalhes da Série:
-- Ao clicar em uma série, o usuário é direcionado para uma página com detalhes completos, como sinopse, elenco, temporadas e episódios.
-### Temporadas e Episódios:
-- Cada série exibe suas temporadas e episódios, com informações sobre data de lançamento, sinopse e classificação.
+- A list of the top 5 highest-rated series, helping users discover new content.
+### Category Navigation:
+- The ability to filter series by category, making it easier to search for specific genres.
+### Title Search:
+- A search bar allows users to quickly find the desired series.
+### Series Details:
+- Clicking on a series directs the user to a page with complete details, such as synopsis, cast, seasons, and episodes.
+### Seasons and Episodes:
+- Each series displays its seasons and episodes, with information about release date, synopsis, and rating.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- React: Biblioteca JavaScript para criar interfaces de usuário declarativas e eficientes.
-- TypeScript: Linguagem superconjunto do JavaScript que adiciona tipagem estática, aprimorando a confiabilidade e a legibilidade do código.
-- Vite: Ferramenta de desenvolvimento moderna que oferece inicialização rápida, recarregamento quente e outras funcionalidades para otimizar o fluxo de trabalho.
-- React Router DOM: Biblioteca para gerenciar o roteamento de páginas na aplicação React, permitindo navegação fluida sem recarregamento.
-- Tailwind CSS: Framework CSS que fornece um sistema de classes utilitárias para estilizar rapidamente componentes e interfaces.
-- API Java Films: Interface de programação do backend Java Films, utilizada para recuperar informações sobre as séries.
+- React: A JavaScript library for building declarative and efficient user interfaces.
+- TypeScript: A superset of JavaScript that adds static typing, enhancing code reliability and readability.
+- Vite: A modern development tool that offers fast startup, hot reload, and other features to optimize workflow.
+- React Router DOM: A library for managing page routing in a React application, enabling smooth navigation without reloading.
+- Tailwind CSS: A CSS framework that provides a utility-first system for quickly styling components and interfaces.
+- Java Films API: The backend interface used to retrieve series information.
 
-## Instruções de Uso
+## Usage Instructions
 
-1. Clone o Repositório:
+1. Clone the Repository:
 ```bash
 git clone https://github.com/LeonardoSardagna/reactFilms.git
 ```
-2. Acesse o diretório do projeto:
+2. Navigate to the project directory:
 ```bash
 cd reactFilms
 ```
-3. Instale as dependências:
+3. Install dependencies:
 ```bash
 npm install
 ```
-5. Execute a aplicação no navegador:
+5. Run the application:
 ```bash
 npm run dev
 ```
-5. Acesse a aplicação no navegador:
+5. Access the application in the browser:
 -Abra um navegador web e acesse a URL `http://localhost:5173`.
 
-## Observações
-- Este projeto é uma interface frontend que consome as APIs fornecidas pelo backend Java Films.
-- Certifique-se de que o backend Java Films esteja rodando e acessível para que o frontend possa obter os dados das séries.
-- A aplicação utiliza React, TypeScript e outras bibliotecas modernas para proporcionar uma experiência de usuário rica e responsiva.
+## Notes
+- This project is a frontend interface that consumes APIs provided by the Java Films backend.
+- Ensure that the Java Films backend is running and accessible for the frontend to fetch series data.
+- The application uses React, TypeScript, and other modern libraries to provide a rich and responsive user experience.
